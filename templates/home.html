@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Careers</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
-    <title>Careers</title>
     <style>
     #banner{
         height:360px;
@@ -15,14 +15,18 @@
 </head>
 <body>
     <div class="container">
-    <h1 class="text-center mt-2 mb-4">Careers</h1>
+    <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
     <img class="img-fluid" id="banner" src="https://img.freepik.com/premium-vector/something-great-typography-design-vector-print-t-shirt_639170-916.jpg" alt="" height="520" width="100%">
     <h2 class="text-center">About Careers</h2>
     <p class="lead">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut et ex, magnam minus explicabo cupiditate adipisci blanditiis, necessitatibus sit ullam accusantium consequuntur. Exercitationem, natus laborum expedita sapiente quis perferendis amet, veritatis consectetur quaerat dignissimos non hic dolores? Architecto, magni reiciendis? Ratione asperiores soluta in, odio vitae corrupti illum saepe officiis consequuntur itaque architecto quod?
     </p>
     <h2 class="text-center mt-2 mb-4">Open Positions</h2>
-    <p class="bodyText">TODO-Show the jobs here</p>
+        <div>
+        {% for job in jobs%}
+        {% include 'jobitem.html' %}
+        {% endfor %}
+        </div>
     <div style="text-align:center">
     <button class="btn btn-primary btn-lg">Contact Us</button>
     <p class="mt-4">Copyright 2022,Muskan</p>
