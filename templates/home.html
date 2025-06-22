@@ -9,18 +9,26 @@
     #banner{
         height:360px;
         width=100%;
-        
+        margin-bottom:16px;
     }
     </style>
 </head>
 <body>
-    <div class="container">
-    <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
+    {% include 'nav.html'%}
     <img class="img-fluid" id="banner" src="https://img.freepik.com/premium-vector/something-great-typography-design-vector-print-t-shirt_639170-916.jpg" alt="" height="520" width="100%">
-    <h2 class="text-center">About Careers</h2>
+    <div class="container">
+    <h1 class="text-center mt-2 mb-4">{{company_name}} Careers
+    </h1>
+    <div class="row" style="margin-bottom:16px">
+        <div class="col-md-6">
     <p class="lead">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut et ex, magnam minus explicabo cupiditate adipisci blanditiis, necessitatibus sit ullam accusantium consequuntur. Exercitationem, natus laborum expedita sapiente quis perferendis amet, veritatis consectetur quaerat dignissimos non hic dolores? Architecto, magni reiciendis? Ratione asperiores soluta in, odio vitae corrupti illum saepe officiis consequuntur itaque architecto quod?
     </p>
+    </div>
+    <div class="d-none d-md-block col-md-6">
+        <img src="/static/pexels-photo-6592659.webp" style="height:320px; border-radius:4px" alt="">
+    </div>
+    </div>
     <h2 class="text-center mt-2 mb-4">Open Positions</h2>
         <div>
         {% for job in jobs%}
@@ -28,9 +36,10 @@
         {% endfor %}
         </div>
     <div style="text-align:center">
-    <button class="btn btn-primary btn-lg">Contact Us</button>
+    <button class="btn btn-primary btn-lg" href=>Contact Us</button>
     <p class="mt-4">Copyright 2022,Muskan</p>
     </div>
     </div>
+    {% include 'footer.html' %}
 </body>
 </html>
